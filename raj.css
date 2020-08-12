@@ -1,0 +1,102 @@
+
+
+html {
+    position: relative;
+  }
+  
+  body {
+    background-color: #e5ecf3;
+    padding: 50px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #497696;
+  }
+  
+  .sudoku {
+    height: 60%;
+  }
+  
+  table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    text-align: center;
+    border-spacing: none;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+  }
+  
+  td {
+    border: 2px solid #38702d;
+    padding: 0;
+  }
+  
+  td td {
+    border: 1px solid #457c00;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: darkred;
+    z-index: 100;
+  }
+  
+  .nums {
+    text-align: center;
+    height: 30px;
+    margin-bottom: 50px;
+    display: none;
+  }
+  
+  .orig {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    font-size: 1.25em;
+    border: 2px solid #9999ee;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    /* //font-weight: bold; */
+  }
+  
+  .orig p {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  /*   z-index: 1; */
+  }
+  
+  .btn {
+    width: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #497696;
+    margin: 0 auto;
+    text-align: center;
+    color: darkred;
+    cursor: pointer;
+  }
+  
+  .btn:active {
+    background-color: #de4c35;
+    color: #497696;
+  }
+  
+  #start {
+    width: 120px;
+  }
+  
+  .target {
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    ms-transition: 0.2s linear;
+    moztransition: 0.2s linear;
+  }
+  
+  
+  /*//settings*/
+  
