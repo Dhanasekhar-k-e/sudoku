@@ -20,3 +20,16 @@ function getGridInit() {
             rand.push([i, row, col]);
         }
     }
+    var result = [];
+    for (var i = 0; i < 9; i++) {
+        var row = "000000000";
+        result.push(row);
+    }
+    for (var i = 0; i < rand.length; i++) {
+        result[rand[i][1]] = replaceCharAt(result[rand[i][1]], rand[i][2], rand[i][0]);
+    }
+
+    return result;
+}
+
+
