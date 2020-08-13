@@ -20,8 +20,12 @@ body {
 .cardgame{
     text-align:center;
 }
-
+#sudoku {
+    display: flex;
+    justify-content: center;
+  } 
 table {
+    align-self:center;
     text-align: center;
     border: 3px solid #38702d;
     border-spacing: 0;
