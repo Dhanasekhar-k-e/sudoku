@@ -1,4 +1,3 @@
-Soduku Project
 
  solve Sudoku with a backtracking algorithm
     Steps are:
