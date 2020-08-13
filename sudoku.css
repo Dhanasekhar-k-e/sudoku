@@ -17,6 +17,9 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+.cardgame{
+    text-align:center;
+}
 
 table {
     text-align: center;
