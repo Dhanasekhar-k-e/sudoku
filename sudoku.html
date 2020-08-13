@@ -1,11 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>Sudoku</title>
     <link rel="stylesheet" type="text/css" href="sudoku.css">
+    <script src="sudoku.js"></script>
 </head>
+
 <body>
-    <h1>Sudoku</h1>
+    <h1>SUDOKU</h1>
+            <div class="dialog-body">
+                <p>Select game difficulty to get started.</p>
+                <ul>
+                    <li class="radio-option">
+                        <label for="easy">
+                            <input id="easy" value="easy" type="radio" name="difficulty"> Easy
+                        </label>
+                    </li>
+                    <li class="radio-option">
+                        <label for="normal">
+                            <input id="normal" value="normal" type="radio" name="difficulty"> Normal
+                        </label>
+                    </li>
+                    <li class="radio-option">
+                        <label for="hard">
+                            <input id="hard" value="hard" type="radio" name="difficulty"> Hard
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dialog-footer">
+                <button onclick="startGameButtonClick();" ripple-color="#003c8f" class="button dialog-btn vertical-adjust" >OK</button>
+            </div>
+        </div>
+    </div>
+
+   
+
     <div class="body" id="sudoku">
         <div class="card game">
             <table id="puzzle-grid">
@@ -298,12 +328,11 @@
                 </tr>
 
             </table>
-        </div>
-    </div>
-    <div>
-        <button>Generate</button>
-        <button id="check-btn" onclick="checkButtonClick()">Check</button>
-        <button onclick="restartButtonClick()">Restart</button>
+            <div >
+                <button onclick="restartButtonClick()" >Restart</button>
+                <button onclick="solvingButtonClick()">Solve</button>
+            </div>
+        </div>  
     </div>
 </body>
-</html>
+<html>
