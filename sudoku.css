@@ -8,7 +8,9 @@
 
 h1 {
     text-align: center;
-    color: #497696;
+    font-size: 45px;
+    color:#82B1FF;
+    
   }
 body {
     height: 100vh;
