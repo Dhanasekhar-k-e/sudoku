@@ -290,6 +290,7 @@ window.onload = function () {
 }
 
 function startGameButtonClick() {
+    document.getElementById("hide-box").style.display="none"
     var difficulties = document.getElementsByName('difficulty');
     var difficulty = 3;
     for (var i = 0; i < difficulties.length; i++) {
@@ -299,6 +300,7 @@ function startGameButtonClick() {
             break;
         }
     }
+    
 }
 
 function restartButtonClick() {
@@ -311,3 +313,5 @@ function solvingButtonClick() {
         ViewPuzzle(solution);
         updateRemainingTable();
 }
+
+
