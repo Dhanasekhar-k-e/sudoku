@@ -124,3 +124,48 @@ function solveGrid(possibleNumber, rows, startFromZero) {
     }
     return -1;
 }
+// generate possible numbers sequence that fit in the current row
+function generatePossibleRows(possibleNumber) {
+    var result = [];
+    function step(level, PossibleRow) {
+        if (level == 9) {
+            result.push(PossibleRow);
+            return;
+        }
+        for (var i in possibleNumber[level]) {
+            if (PossibleRow.includes(possibleNumber[level][i]))
+                continue;
+            step(level + 1, PossibleRow + possibleNumber[level][i]);
+        }
+    }
+    step(0, "");
+    return result;
+}
+// update value of remaining numbers
+function updateRemainingTable() {
+    for (var i = 1; i < 10; i++) {
+        var item = document.getElementById("remain-" + i);
+        item.innerText = remaining[i - 1];
+        item.classList.remove("red");
+        item.classList.remove("gray");
+        if (remaining[i - 1] === 0)
+            item.classList.add("gray");
+        else if (remaining[i - 1] < 0 || remaining[i - 1] > 9)
+            item.classList.add("red");
+    }
+}
+// solve
+function solveClick() {
+
+    if (gameOn) {
+        // reset remaining number table
+        for (var i in remaining)
+            remaining[i] = 9;
+
+        // review puzzle
+        ViewPuzzle(solution);
+
+        // update remaining numbers table
+        updateRemainingTable();
+    }
+}
