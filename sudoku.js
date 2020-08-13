@@ -32,4 +32,61 @@ function getGridInit() {
     return result;
 }
 
+function getColumns(grid) {
+    var result = ["", "", "", "", "", "", "", "", ""];
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++)
+            result[j] += grid[i][j];
+    }
+    return result;
+}
 
+function getBlocks(grid) {
+    var result = ["", "", "", "", "", "", "", "", ""];
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++)
+            result[Math.floor(i / 3) * 3 + Math.floor(j / 3)] += grid[i][j];
+    }
+    return result;
+}
+
+// function to replace char in string
+function replaceCharAt(string, index, char) {
+    if (index > string.length - 1) 
+        return string;
+    else
+        return string.substr(0, index) + char + string.substr(index + 1);
+}
+
+// get allowed numbers that can be placed in each cell
+function generatePossibleNumber(rows, columns, blocks) {
+    var psb = [];
+
+    // for each cell get numbers that are not viewed in a row, column or block
+    // if the cell is not empty then, allowed number is the number already exist in it
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++) {
+            psb[i * 9 + j] = "";
+            if (rows[i][j] != 0) {
+                psb[i * 9 + j] += rows[i][j];
+            } else {
+                for (var k = '1'; k <= '9'; k++) {
+                    if (!rows[i].includes(k))
+                        if (!columns[j].includes(k))
+                            if (!blocks[Math.floor(i / 3) * 3 + Math.floor(j / 3)].includes(k))
+                                psb[i * 9 + j] += k;
+                }
+            }
+        }
+    }
+    return psb;
+}
+
+function solveGrid(possibleNumber, rows, startFromZero) {
+    var solution = [];
+    var result = nextStep(0, possibleNumber, rows, solution, startFromZero);
+    if (result == 1)
+        return solution;
+}
+
+}
