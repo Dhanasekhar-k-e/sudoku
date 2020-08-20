@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lemonada', cursive;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  color:#82B1FF;
+  
+}
+body {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("resources/img.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.cardgame{
+  text-align:center;
+}
+#sudoku {
+  display: flex;
+  justify-content: center;
+} 
+table {
+  align-self:center;
+  text-align: center;
+  border: 3px solid #38702d;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+
+td {
+  border: 2px solid #38702d;
+  text-align: center;
+  vertical-align: middle;
+  /* padding: 0; */
+}
+
+td input {
+  color: #000000;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+
+input:disabled {
+  background-color:#B3E5FC;
+}
+
+tr:nth-child(3n) {
+  border-bottom: 4px solid #000000;
+}
+
+tr:nth-child(3n+1) {
+  border-top: 4px solid #000000;
+}
+
+td:nth-child(3n) {
+  border-right: 4px solid #000000;
+}
+
+td:nth-child(3n+1) {
+  border-left: 4px solid #000000;
+}
+
+.body {
+  width: 95%;
+  max-width: 800px;
+  margin: 96px auto 16px auto;
+  display: flex;
+}
+.radio-option {
+  padding: 0 36px;
+  list-style-type: none;
+  position: relative;
+}
+
+
+/* edit */
+
+button{
+  background-color:#FFB74D;
+  background-color:#FFB74D;
+  border:hidden;
+  padding: 15px;
+  width:100px;
+  height:40px;
+ margin:0;
+ padding: 0;
+  font-size:medium;
+ border-radius: 15px;
+ color: white;
+ 
+ 
+}
